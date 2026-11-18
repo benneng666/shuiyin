@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-11-04",
+  "engine": "RapidOCR + PaddleOCR ONNX models (CPU)",
+  "code_source": "https://github.com/RapidAI/RapidOCR",
+  "pypi": "https://pypi.org/project/rapidocr-onnxruntime/1.4.4/",
+  "rapidocr_version": "1.4.4",
+  "onnxruntime_version": "1.23.2",
+  "opencv_version": "4.12.0.88",
+  "repair_image": "Auto flat-background / directional boundary reconstruction + OpenCV Telea or NS; optional LaMa ONNX CPU",
+  "optional_ai_model": "lama-model.json (208044816 bytes, downloaded lazily, SHA256 verified, not bundled)",
+  "repair_video": "Adaptive CPU LaMa keyframes, boundary-gated short propagation, simple-background interpolation; optional fast FFmpeg delogo. Video PTS/audio packets verified.",
+  "models": [
+    {
+      "file": "ch_PP-OCRv4_det_infer.onnx",
+      "bytes": 4745517,
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9"
+    },
+    {
+      "file": "ch_PP-OCRv4_rec_infer.onnx",
+      "bytes": 10857958,
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b"
+    },
+    {
+      "file": "ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+    }
+  ],
+  "limitations": [
+    "OCR proposes text-watermark candidates; it does not reliably detect every logo",
+    "CPU spatial interpolation does not reconstruct true occluded detail",
+    "Video sample detection is not continuous moving watermark tracking",
+    "Neural video repair can still distort contours or flicker; 180s/5400frames/two ROI/120 keyframe limit"
+  ],
+  "detection": "Tiled CPU OCR, merchant keywords / shop labels / optional corner text; reviewable candidates"
+}

@@ -1,0 +1,49 @@
+# Python 环境与缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.profiles/
+*.egg-info/
+
+# 构建与打包产物
+dist/
+build/
+*.spec.bak
+
+# 浏览器配置与下载
+downloads/
+.profiles/
+
+# 大体积验收素材 / 测试样本 / 交付输出（不入库）
+research/
+验收-*/
+交付/
+验收*/
+samples/
+*.mp4
+*.mov
+*.avi
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.zip
+*.7z
+
+# 本地状态与隐私
+.workbuddy/
+*.log
+credentials*.json
+token*.txt
+测试商品链接.txt
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
